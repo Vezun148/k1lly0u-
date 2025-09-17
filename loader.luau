@@ -1,23 +1,3 @@
--- local Name, _ = identifyexecutor()
-
--- local NOT_FUCKING_SUPPORTED = {
--- 	"Swift",
--- 	"Luna",
--- 	"Xeno",
--- 	"Solara",
--- 	"Zorara",
--- 	"Argon"
--- }
-
--- if typeof(Name) == "string" then
--- 	for _, v in next, NOT_FUCKING_SUPPORTED do
--- 		if Name:sub(1, #v) == v then
--- 			game:GetService("Players").LocalPlayer:Kick("Your executor is NOT supported. This is NOT a bug with Astral so DO NOT make a bug report or open a ticket.")
--- 			return
--- 		end
--- 	end
--- end
-
 -- Doors hotfix
 if game.PlaceId == 6839171747 and game:GetService("ReplicatedStorage"):FindFirstChild("ModulesClient") then
 	game:GetService("ReplicatedStorage").ModulesClient.Name = "ClientModules"
