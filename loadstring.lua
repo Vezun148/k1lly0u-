@@ -1,4 +1,4 @@
-local PremiumModule = loadstring(game:HttpGet("https://raw.githubusercontent.com/Vezun148/k1lly0u-/refs/heads/main/prem.lua"))()
+local PremiumModule = loadstring(game:HttpGet("https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/assets/Premium"))()
 
 local function LoadScript(url)
     local success, scriptContent = pcall(game.HttpGet, game, url)
@@ -22,5 +22,11 @@ local function LoadScript(url)
     return true
 end
 
-
-
+if not shared.VertexLoaded then
+    shared.VertexLoaded = true
+    local url = "https://raw.githubusercontent.com/vertex-peak/vertex/main/modules/" .. game.PlaceId .. ".lua"
+    local success = LoadScript(url)
+    if not success then
+        LoadScript("https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/universal")
+    end
+end
